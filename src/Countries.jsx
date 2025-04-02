@@ -14,6 +14,7 @@ const CountryFlags = () => {
             const data = await response.json();
             setCountries(data);
         } catch(error) {
+            console.error("Error:", error);
             setError(error.message);
         } finally {
             setLoading(false);
